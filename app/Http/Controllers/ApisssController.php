@@ -64,14 +64,13 @@ class ApisssController extends Controller
         if(count(User::whereEmail($request->email)->get())>=1){
             return response()->json([
                 'status'=>501,
-                'message'=>'Email address already exist, enter another address
-                 or get out of here!!!!'
+                'message'=>'Email address already exist, get the fuck out of here!!!!'
             ]);
         }
         else if(count(User::wherePhone_no($request->phone_no)->get()) >=1){
             return response()->json([
                 'status'=>503,
-                'message'=>'Phone number already exist, please input another number'
+                'message'=>'Phone number already exist, get the fuck out of here!!!!'
             ]);
         }else{
         $user=new User([
@@ -84,7 +83,7 @@ class ApisssController extends Controller
             if ($user->save() );
             return response()->json([
                 'status'=>200,
-                'message'=>'Nice one buddy, It is saved to the database!!!'
+                'message'=>'Nice one buddy, It is saved to your database!!!'
             ]);
         }
 
@@ -94,7 +93,7 @@ class ApisssController extends Controller
         //     'password' => 'required|string|min:6|confirmed',
         // ]);
         
-            }
+    }
            
 
     /**

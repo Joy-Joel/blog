@@ -77,7 +77,7 @@ class StandardController extends Controller
       $post->delete();
 
      return redirect('/post/title')->with('success', 'Stock has been deleted Successfully'); 
-  }
+    }
   public function uploadprofile(Request $request){
     //  dd($request->file('profile_picture')->getClientOriginalName());
       $this->validate($request, [
