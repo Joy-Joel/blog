@@ -65,8 +65,7 @@
         @csrf
             <div class="form-group">
                 <label for="exampleInputEmail1" class="name" ></label>
-                <input class="form-control" name="name" placeholder="name">
-                
+                <input class="form-control" name="name" placeholder="name">  
             </div>
             <div class="form-group">
                 <label for="email"></label>
