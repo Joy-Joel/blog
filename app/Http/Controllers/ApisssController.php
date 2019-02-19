@@ -159,9 +159,18 @@ class ApisssController extends Controller
      * @param  \App\Apisss  $apisss
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Apisss $apisss)
+    public function destroy(User $user)
     {
-        //
+        if($user->delete()){
+            return response()->json([ 
+                'success'=>true,
+                'message'=>'User details was successfully deleted'],200);
+            }else{
+                    return response()->json([
+                   'success'=>false,
+                   'message'=>'User details not deleted',
+               ], 500);
+            }  
     }
 }
 
