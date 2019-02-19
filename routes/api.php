@@ -20,5 +20,5 @@ Route::resource('/users', 'ApisssController');
 Route::post('/login', 'ApisssController@login');
 Route::post('/posts/create','ApisssController@store');
 Route::resource('/posts/edit','ApisssController@edit');
-Route::put('/posts/edit', 'ApisssController@update');
-
+Route::put('/post/{id}', 'ApisssController@update');
+Route::delete('/user/{user}', 'ApisssController@destory');
