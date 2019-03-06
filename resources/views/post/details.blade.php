@@ -24,7 +24,7 @@
             {{$post->content}}
         </div>
         <div class="panel-heading">
-            {{$post->user->name}} --- created at{{$post->created_at}}
+            {{$post->user->name}} --- created at  {{$post->created_at}}
         </div>
        
         <a href="{{route('edit',$post->id)}}">Edit</a>
@@ -41,7 +41,7 @@
                     {{$comments->comment}}
                 </div>
                 <div class="panel-footer">
-                   <strong> Comment by </strong>{{$comments->name}}
+                   <strong> Commented by </strong>{{$comments->name}}
                 </div>
             </div> 
         @endforeach

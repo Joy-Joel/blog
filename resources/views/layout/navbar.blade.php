@@ -13,11 +13,17 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Member
+      <a href="{{ Auth::user()->name }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> {{ Auth::user()->name }}
       <span class="caret"></span></a>
     <ul class="dropdown-menu" role="menu">
-      <li><a href="/">Log Out</a></li>
-      <li><a href="/login">Login</a></li>
+      <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                   Log Out </a></li>
+          <!-- <a href="{{ route('logout') }}">Log Out</a> -->
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                    </form>
+                                </div>
+      <!-- <li><a href="/login">Login</a></li> -->
     </ul>
     </li>
     </ul>

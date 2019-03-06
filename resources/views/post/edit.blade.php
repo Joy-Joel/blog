@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title','Edit Comment')
+@section('title','Edit Post')
 @section('content')
 
 
@@ -8,13 +8,14 @@
 <form  method="POST">
 @csrf
     <div>
-        title <input type="text" name="title" value="{{$post->title}}"/>
+        Title <input type="text" name="title" value="{{$post->title}}"/>
     </div>
+    <br>
     <div>
-        content <input type="textarea" name="content" id="" rows="4" value="{{$post->content}}"></textarea>
+    Content  <textarea name="content" id="" rows="4" value="{{$post->content}}"></textarea>
     </div>
-   
-    <input type="submit" class="btn btn-primary" value="Update" />
+    <br><br>
+    <input type="submit" class="btn btn-primary ml-3" value="Update"  />
 
 
 @endsection

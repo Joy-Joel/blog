@@ -14,8 +14,8 @@ class AddToUsertablesssss extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('phone_no');
-            $table->string('gender');
+            $table->string('phone_no')->nullable();
+            $table->string('gender')->nullable();
         });
     }
 
